@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te quiero o no te quiero</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradiente de colores */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+        }
+
+        /* Contenedor central */
+        .container {
+            background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            width: 350px;
+            animation: fadeIn 1s ease-out; /* Animación de aparición */
+        }
+
+        /* Botones */
+        .btn {
+            background-color: #fff;
+            color: #ff7e5f;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: scale(1.1); /* Escala suave al pasar el ratón */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Resultado */
+        .result {
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 30px;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilo para la transición de los botones */
+        .btn:active {
+            transform: scale(0.98); /* Efecto de pulsación */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Te quiero o no te quiero</h1>
+        <button class="btn" id="tiraMonedaBtn">Tira la moneda</button>
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script>
+        document.getElementById('tiraMonedaBtn').addEventListener('click', function() {
+            // Cambié "No te quiero" por "No te voy a querer gooooooor"
+            let resultado = Math.random() < 0.5 ? "Te quiero" : "Como no No te voy a querer goooordi";
+            document.getElementById('resultado').textContent = resultado;
+        });
+    </script>
+</body>
+</html>

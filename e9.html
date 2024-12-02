@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        alert("Hay un número aleatorio del 1 al 10, adivínalo")
+        let eleccion=parseInt(prompt("Introduce tu eleccion"))
+
+        do{
+        if (eleccion>numeroSecreto){
+            alert("Más bajo")
+        }else if ( eleccion<numeroSecreto){
+            alert("Mas alto")
+        }
+        
+        eleccion = parseInt(prompt("Introduce tu elección:"));
+    }while (numeroSecreto!==eleccion)
+    alert("Correcto")
+    </script>
+</body>
+</html>

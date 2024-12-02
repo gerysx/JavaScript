@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Solicitar números y convertirlos directamente
+        let num1 = parseFloat(prompt("Introduce un número"));
+        let num2 = parseFloat(prompt("Introduce otro número"));
+    
+        // Validar los valores
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Por favor, introduce solo números válidos.");
+        } else {
+            alert(`El resultado de la suma es: ${num1 + num2}`);
+        }
+    </script>
+</body>
+</html>
